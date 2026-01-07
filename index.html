@@ -125,13 +125,17 @@
       position: absolute;
       width: 100%;
       text-align: center;
-    }
-    @keyframes reelSpin {
-      0% { transform: translateY(-400%); }
-      100% { transform: translateY(0); }
-    span {
-      display: inline-block;
-    }
+   
+      @keyframes reelSpin {
+      from { transform: translateY(-400px); }
+      to { transform: translateY(0); }
+      }
+      
+      .spinning {
+        display: inline-block;
+        animation: reelSpin 0.1s linear infinite;
+        will-change: transform;
+      }
 
     .roulette-wheel {
       width: 200px; height: 200px; 
